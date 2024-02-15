@@ -26,11 +26,14 @@
          return;
      }
  
+     
+     
+     
      // 입력된 내용으로 게시글 데이터 업데이트
      Class.forName("com.mysql.cj.jdbc.Driver");
      try ( 
          Connection conn = DriverManager.getConnection(
-        		 "jdbc:mysql://localhost:3306/firm", "root", "mysql");
+        		 "jdbc:mysql://localhost:3306/project1", "root", "mysql");
          Statement stmt = conn.createStatement();            
      ) {
          // 현재 시간 얻기

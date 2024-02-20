@@ -6,7 +6,7 @@
 <%
 	request.setCharacterEncoding("utf-8");
 	String id = request.getParameter("id");
-	String pw = request.getParameter("password");
+	String pw = request.getParameter("name");
 	
 	boolean login = false;
 

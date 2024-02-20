@@ -18,5 +18,13 @@
     <fullyQualifiedTypeName name="java.lang.Thread"/>
     <fullyQualifiedTypeName name="thread.AutoSaveThread"/>
     <fullyQualifiedTypeName name="ramda.MyFunc"/>
+    <fullyQualifiedTypeName name="dao.MemberDao"/>
     <fullyQualifiedTypeName name="dto.Member"/>
+    <fullyQualifiedTypeName name="java.lang.FunctionalInterface"/>
+    <fullyQualifiedTypeName name="ramda.MyFunctionalInterface"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.lang.Character"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
 </qualifiedTypeNameHistroy>

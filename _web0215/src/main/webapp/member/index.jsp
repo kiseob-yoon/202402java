@@ -3,6 +3,11 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="path" value="${pageContext.request.contextPath}"/>
 
+<%
+	String memberId = (String)session.getAttribute("MEMBERID");
+	String memName = (String)session.getAttribute("name");
+	boolean login = memberId == null ? false : true;
+%>
 
 <html>
 
@@ -30,8 +35,19 @@
         </ul>
         
         <ul class="util">
-		<li><a href="${path}/member/sessionLoginForm.jsp">Login</a></li>
-       		
+				<%
+				if (login) {
+				%>
+				"<%=memName%>"님 로그인 한 상태
+				<input type="button" value="로그아웃" onclick="location.href='sessionLogout.jsp'">
+				<%
+				} else {
+				%>
+				<li><a href="${path}/member/sessionLoginForm.jsp">Login</a></li>
+				<%
+				}
+				%>
+
         </ul>
     </div>
 </header>

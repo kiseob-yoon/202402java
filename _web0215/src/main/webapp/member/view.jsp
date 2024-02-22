@@ -25,6 +25,7 @@
 	
 	BoardDao dao = BoardDao.getInstance(); 
 	Board board = dao.selectOne(num, true);
+	Board board2 = dao.decrease(num, true);
 	
 	writer = board.getWriter();
 	title = board.getTitle();

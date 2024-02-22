@@ -32,6 +32,9 @@
     alert('아이디 또는 비밀번호가 틀립니다!');
     history.back();
 </script>
+<%
+response.sendRedirect("login_main.jsp");
+%>
  
 </body>
 </html>

@@ -7,8 +7,6 @@
     <fullyQualifiedTypeName name="sec01.exam07.Calculator"/>
     <fullyQualifiedTypeName name="java.sql.Connection"/>
     <fullyQualifiedTypeName name="java.sql.DriverManager"/>
-    <fullyQualifiedTypeName name="dto.Board"/>
-    <fullyQualifiedTypeName name="dao.BoardDao"/>
     <fullyQualifiedTypeName name="java.sql.SQLException"/>
     <fullyQualifiedTypeName name="thread.PrintThread"/>
     <fullyQualifiedTypeName name="thread.PrintThread2"/>
@@ -18,8 +16,6 @@
     <fullyQualifiedTypeName name="java.lang.Thread"/>
     <fullyQualifiedTypeName name="thread.AutoSaveThread"/>
     <fullyQualifiedTypeName name="ramda.MyFunc"/>
-    <fullyQualifiedTypeName name="dao.MemberDao"/>
-    <fullyQualifiedTypeName name="dto.Member"/>
     <fullyQualifiedTypeName name="java.lang.FunctionalInterface"/>
     <fullyQualifiedTypeName name="ramda.MyFunctionalInterface"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
@@ -27,4 +23,18 @@
     <fullyQualifiedTypeName name="java.lang.Character"/>
     <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="java.io.PrintWriter"/>
+    <fullyQualifiedTypeName name="dao.BoardDao"/>
+    <fullyQualifiedTypeName name="dto.Board"/>
+    <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.io.OutputStream"/>
+    <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+    <fullyQualifiedTypeName name="java.io.InputStream"/>
+    <fullyQualifiedTypeName name="java.io.FileInputStream"/>
+    <fullyQualifiedTypeName name="java.io.Writer"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="java.io.FileWriter"/>
+    <fullyQualifiedTypeName name="dto.Member"/>
+    <fullyQualifiedTypeName name="dao.MemberDao"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
 </qualifiedTypeNameHistroy>

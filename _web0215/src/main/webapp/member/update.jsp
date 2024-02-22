@@ -30,6 +30,7 @@
      
  	BoardDao dao = BoardDao.getInstance(); 
  	dao.update(num,writer,title,content);
+
  
     
      // 글 보기 화면으로 돌아감

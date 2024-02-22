@@ -1,13 +1,19 @@
-html,
-body {
-  height: 100%;
+/* 추가로 필요한 스타일 수정 */
+.col-md-6 {
+  margin: auto; /* 폼을 중앙으로 정렬합니다. */
 }
 
+/* 폼 요소의 최대 너비 설정 */
+.form-signin .form-floating input,
+.form-signin .form-check-label {
+  max-width: 100%;
+}
+
+/* 폼의 최대 너비 설정 */
 .form-signin {
-  max-width: 330px;
+  max-width: 400px; /* 필요에 따라 조절 */
   padding: 1rem;
 }
-
 .form-signin .form-floating:focus-within {
   z-index: 2;
 }

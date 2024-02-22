@@ -10,6 +10,7 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 
 import dto.Board;
+import dto.Member;
 
 public class BoardDao {
 	private static Connection conn;
@@ -75,6 +76,29 @@ public class BoardDao {
 		return board;
 
 	}
+	
+	public Board decrease(int num, boolean inc) {
+		String sql = "select * from board where num = ?";
+		PreparedStatement pstmt;
+		Board board = null;
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, num);
+			ResultSet rs = pstmt.executeQuery();	
+			if(rs.next()) {
+				board = new Board(rs.getInt("num"), rs.getString("writer"), 
+						rs.getString("title"), rs.getString("content"),
+						rs.getString("regtime"), rs.getInt("hits"));
+			}
+			if(inc) {
+				pstmt.executeUpdate("update board set hits=hits-1 where num=" + num);
+			}
+
+		}	catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return board;
+	}
 
 	public int delete(int num) {
 		String sql = "select * from board where num = ?";
@@ -133,6 +157,29 @@ public int update(int num, String writer, String title, String content) {
 	}
 	
 	return 0;
+}
+public Board selectForLogin2(int num, String writer) {
+	Board board = null;
+	String sql = "select * from board where num = ? and writer = ?";
+	PreparedStatement pstmt;
+
+	try {
+		pstmt = conn.prepareStatement(sql);
+		pstmt.setInt(1, num);
+		pstmt.setString(2, writer);
+		
+		ResultSet rs = pstmt.executeQuery();	
+		if(rs.next()) {
+			board = new Board(rs.getInt("num"), rs.getString("writer"), 
+					rs.getString("title"), rs.getString("content"),
+					rs.getString("regtime"), rs.getInt("hits"));
+		}
+
+	}	catch (SQLException e) {
+		e.printStackTrace();
+	}
+	return board;
+
 }
 
 }

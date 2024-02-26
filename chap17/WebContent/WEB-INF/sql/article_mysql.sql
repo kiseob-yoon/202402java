@@ -2,7 +2,7 @@ create table id_sequence (
 	sequence_name varchar(10) not null,
 	next_value int not null,
 	primary key (sequence_name)
-) default character set = utf8;
+) 
 
 insert into id_sequence values ('article', 0);
 
@@ -18,4 +18,4 @@ create table article (
 	content text,
 	primary key (article_id),
 	index (sequence_no)
-) default character set = euckr;
+) 

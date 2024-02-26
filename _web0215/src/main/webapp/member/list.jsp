@@ -7,11 +7,16 @@
 <%@ page import="java.sql.*" %>
 <%
 	String memberId = (String)session.getAttribute("MEMBERID");
+	String named = (String)session.getAttribute("named");
+
+
 	if(memberId == null){
 		response.sendRedirect("sessionLoginForm.jsp");
 	}
 	BoardDao dao = BoardDao.getInstance(); 
 	List<Board> list = dao.selectList();
+	List<Board>search = dao.selectFit(named);
+	
 
 %>
 
@@ -25,6 +30,11 @@
   </head>
   <body>
       <link href="css/headers.css" rel="stylesheet">
+      <style>
+      a{
+	text-decoration: none;
+}
+      </style>
   </head>
   <body>
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
@@ -124,9 +134,9 @@
   </div>
   </div>
       <div class="container d-flex flex-wrap justify-content-center">
-        <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto flex-row" role="search">
+        <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto flex-row" role="search" method="post" action="select.jsp">
         <div class="d-flex align-items-center">
-          <input type="search" class="form-control" placeholder="Search..." aria-label="Search" style="margin:10px">
+          <input type="search" name="na" class="form-control" placeholder="Search..." aria-label="Search" style="margin:10px">
           <input type="submit" value="검색" class="btn btn-light text-dark me-2 d-inline-block"></input>
         </div>
         </form>
@@ -142,7 +152,28 @@
         <th class="regtime">작성일시</th>
         <th                >조회수  </th>
     </tr>
-<%
+<%     
+if(named != null && !named.isEmpty()){
+    for(Board board : search){
+%>
+        <tr>
+            <td><%=board.getNum()%></td>
+            <td style="text-align:center;">
+                <a href="view.jsp?num=<%=board.getNum()%>">
+                    <%=board.getTitle()%>
+                </a>
+            </td>
+            <td><%=board.getWriter()%></td>
+            <td><%=board.getRegtime()%></td>
+            <td><%=board.getHits()%></td>
+
+        </tr>
+
+<% 
+	}
+   
+  
+} else {
 for(Board bo : list){
 %>         
         <tr>
@@ -161,6 +192,8 @@ for(Board bo : list){
 <%
 session.setAttribute("MEMBERID", bo.getWriter());
 }
+}
+
 %>
 </table>
 

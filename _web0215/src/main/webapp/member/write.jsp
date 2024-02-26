@@ -43,9 +43,28 @@
 	crossorigin="anonymous">
     <meta charset="UTF-8">
     <style>
-        table { width:680px; text-align:center; }
-        th    { width:100px; background-color:cyan;}
+        table { width:1000px; text-align:center; margin-bottom: 50px; }
+        th    { width:200px; height: 100px; }
+        th, td{ font-size: 20px; padding: 15px;}
         input[type=text], textarea { width:100%; }
+        input[type="submit"], input[type="button"] {
+    width: 100px; /* 원하는 너비로 조절합니다. */
+    height: 40px; /* 원하는 높이로 조절합니다. */
+    padding: 10px; /* 원하는 패딩 값을 설정합니다. */
+  }
+
+
+  /* 버튼의 크기를 조절하는 스타일 */
+  input[type="submit"], input[type="button"], input[type="reset"] {
+    width: 100px; /* 원하는 너비로 조절합니다. */
+    height: 40px; /* 원하는 높이로 조절합니다. */
+    padding: 10px; /* 원하는 패딩 값을 설정합니다. */
+    margin: 10px;
+    float: right;
+  }
+  input[type="button"], input[type="button"], input[type="reset"] {
+    float:right;
+  }
     </style>
     <link href="css/headers.css" rel="stylesheet">
 </head>
@@ -177,8 +196,10 @@
 
     </table>
     
+    <input type="button" class="btn btn-primary" value="목록" onclick="history.back()">
+        <input type="reset" class="btn btn-primary" value="초기화">
+
         <input type="submit" class="btn btn-primary" value="저장">
-    	<input type="button" class="btn btn-primary" value="취소" onclick="history.back()">
 </div>
    </div>
 </form>

@@ -12,8 +12,10 @@
     request.setCharacterEncoding("utf-8");
     int num = Integer.parseInt(request.getParameter("id"));
     String writer = request.getParameter("name");
-    Board board = BoardDao.getInstance().selectForLogin2(num, writer);
     String remember = request.getParameter("remember");
+    
+    Board board = BoardDao.getInstance().selectForLogin2(num, writer);
+
     
     
     // 쿠키 생성 및 삭제

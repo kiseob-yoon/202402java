@@ -24,7 +24,7 @@
 
     <header>
     <div class="inner">
-        <h1><a href="#">DCODLAB</a></h1>
+        <h1><a href="#">BOARD</a></h1>
         
         <ul id="gnb">
             <li><a href="${path}/member/list.jsp">게시판</a></li>
@@ -38,7 +38,7 @@
 				<%
 				if (login) {
 				%>
-				"<%=memName%>"님 로그인 한 상태
+				<%=memName%>님 로그인 한 상태
 				<input type="button" value="로그아웃" onclick="location.href='sessionLogout.jsp'">
 				<%
 				} else {

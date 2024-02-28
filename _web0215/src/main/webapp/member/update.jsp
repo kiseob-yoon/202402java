@@ -8,7 +8,14 @@
   
  <%
      request.setCharacterEncoding("utf-8");
+ 	 String memberId = (String)session.getAttribute("MEMBERID");
+ 	if(memberId == null){
+ 		response.sendRedirect("sessionLoginForm.jsp");
+ 	}
+ 	
  
+ 
+ 	 
      // 전달받은 값 읽기
      int    num     = Integer.parseInt(request.getParameter("num"));
      String writer  = request.getParameter("writer" );

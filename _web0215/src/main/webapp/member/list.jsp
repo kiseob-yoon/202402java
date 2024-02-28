@@ -9,14 +9,15 @@
 	String memberId = (String)session.getAttribute("MEMBERID");
 	String named = (String)session.getAttribute("named");
 
-
 	if(memberId == null){
 		response.sendRedirect("sessionLoginForm.jsp");
 	}
+
 	BoardDao dao = BoardDao.getInstance(); 
 	List<Board> list = dao.selectList();
 	List<Board>search = dao.selectFit(named);
 	
+
 
 %>
 
@@ -164,9 +165,10 @@ if(named != null && !named.isEmpty()){
         <tr>
             <td><%=board.getNum()%></td>
             <td style="text-align:center;">
-                <a href="view.jsp?num=<%=board.getNum()%>">
-                    <%=board.getTitle()%>
-                </a>
+			<a href="view.jsp?num=<%=board.getNum()%>
+			&writer=<%=board.getWriter()%>">
+    		<%=board.getTitle()%>
+			</a>
             </td>
             <td><%=board.getWriter()%></td>
             <td><%=board.getRegtime()%></td>

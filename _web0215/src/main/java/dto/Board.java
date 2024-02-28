@@ -7,6 +7,8 @@ public class Board {
 	private String content;
 	private String regtime;
 	private int hits;
+	private int likes;
+	private int dislikes;
 	
 	public Board(int num, String writer, String title, String content, String regtime, int hits) {
 		super();
@@ -18,7 +20,21 @@ public class Board {
 		this.hits = hits;
 	}
 	
-	
+	public Board(int num, String writer, String title, String content, String regtime, int hits, int likes,
+			int dislikes) {
+		super();
+		this.num = num;
+		this.writer = writer;
+		this.title = title;
+		this.content = content;
+		this.regtime = regtime;
+		this.hits = hits;
+		this.likes = likes;
+		this.dislikes = dislikes;
+	}
+
+
+
 
 	public Board(String writer, String title, String content) {
 		super();
@@ -28,6 +44,22 @@ public class Board {
 	}
 
 
+
+	public int getLikes() {
+		return likes;
+	}
+
+	public void setLikes(int likes) {
+		this.likes = likes;
+	}
+
+	public int getDislikes() {
+		return dislikes;
+	}
+
+	public void setDislikes(int dislikes) {
+		this.dislikes = dislikes;
+	}
 
 	public int getNum() {
 		return num;

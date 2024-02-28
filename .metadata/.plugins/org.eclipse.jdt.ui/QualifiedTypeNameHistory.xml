@@ -22,7 +22,6 @@
     <fullyQualifiedTypeName name="java.lang.Character"/>
     <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="java.io.PrintWriter"/>
-    <fullyQualifiedTypeName name="dao.BoardDao"/>
     <fullyQualifiedTypeName name="dto.Board"/>
     <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
     <fullyQualifiedTypeName name="java.io.OutputStream"/>
@@ -48,4 +47,7 @@
     <fullyQualifiedTypeName name="mvjsp.board.model.Member"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="dao.BoardDao"/>
+    <fullyQualifiedTypeName name="dto.Like_dislikes"/>
+    <fullyQualifiedTypeName name="dao.Like_dislikesDao"/>
 </qualifiedTypeNameHistroy>

@@ -10,6 +10,7 @@
     int num = Integer.parseInt(request.getParameter("num"));
 
 	String memberId = (String)session.getAttribute("MEMBERID");
+	
 	if(memberId == null){
 		response.sendRedirect("sessionLoginForm.jsp");
 	}
@@ -22,8 +23,3 @@
 		location.href="list.jsp";
 	</script>
 
-<%
-	
-    // 목록보기 화면으로 돌아감
-    //response.sendRedirect("list.jsp");
-%>

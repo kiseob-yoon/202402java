@@ -52,9 +52,9 @@
     </div>
 </header>
 <figure>
-    <video src="${path}/img/visual.mp4" autoplay muted loop></video>
+    <video src="${path}/img/movie.mp4" autoplay muted loop></video>
     <div class="inner">
-        <h1>INNOVATION</h1>
+        <h1>ACTION MOVIE</h1>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br>
         Id praesentium molestias similique quaerat magni facere in a? Adipisci,
         possimus reprehenderit!</p>
@@ -67,33 +67,33 @@
         <div class="wrap">
             <article>
                 <div class="pic">
-                    <img src="${path}/img/news1.jpg" alt="1번째 콘텐츠 이미지">
+                    <img src="${path}/img/dun.jpg" alt="1번째 콘텐츠 이미지">
                 </div>
-                <h2><a href="#">Lorem ipsum dolor sit</a></h2>
+                <h2><a href="#">듄-파트2 </a></h2>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae minus,
                     eaque corrupti vero ad maiores! </p>
             </article>
             <article>
                 <div class="pic">
-                    <img src="${path}/img/news2.jpg" alt="2번째 콘텐츠 이미지">
+                    <img src="${path}/img/fa.jpg" alt="2번째 콘텐츠 이미지">
                 </div>
-                <h2><a href="#">Lorem ipsum dolor sit</a></h2>
+                <h2><a href="#">파묘</a></h2>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae minus,
                     eaque corrupti vero ad maiores! </p>
             </article>
             <article>
                 <div class="pic">
-                    <img src="${path}/img/news3.jpg" alt="3번째 콘텐츠 이미지">
+                    <img src="${path}/img/tirano.jpg" alt="3번째 콘텐츠 이미지">
                 </div>
-                <h2><a href="#">Lorem ipsum dolor sit</a></h2>
+                <h2><a href="#">아이엠 티라노</a></h2>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae minus,
                     eaque corrupti vero ad maiores! </p>
             </article>
             <article>
                 <div class="pic">
-                    <img src="${path}/img/news4.jpg" alt="4번째 콘텐츠 이미지">
+                    <img src="${path}/img/citizen.jpg" alt="4번째 콘텐츠 이미지">
                 </div>
-                <h2><a href="#">Lorem ipsum dolor sit</a></h2>
+                <h2><a href="#">시민덕희</a></h2>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae minus,
                     eaque corrupti vero ad maiores! </p>
             </article>

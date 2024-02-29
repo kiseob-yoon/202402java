@@ -7,6 +7,6 @@ import java.sql.SQLException;
 public class ConnectionProvider {
 
 	public static Connection getConnection() throws SQLException {
-		return DriverManager.getConnection("jdbc:apache:commons:dbcp:/board"); //joci의 이름이 board
+		return DriverManager.getConnection("jdbc:apache:commons:dbcp:/board");
 	}
 }

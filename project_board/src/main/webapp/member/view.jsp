@@ -26,6 +26,7 @@
     int likes = 0;
     int dislikes =0;
     
+    
     String path = request.getContextPath();
     
 	int num = Integer.parseInt(request.getParameter("num"));
@@ -60,6 +61,7 @@
 %>
 <html>
 <head>
+<title>게시판 글보기</title>
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
 	rel="stylesheet"
@@ -208,7 +210,7 @@ h2 {
 					
 					
         			<a href="location.jsp?num=<%=board.getNum()%>">
-  					<img id="myImage" src="${path}/assets/brand/hand-thumbs-up.svg" style="text-align: right; margin: 10px 0px 0px 435px; width:40px; height:32px;">
+  					<img id="myImage" src="<%=path%>/assets/brand/hand-thumbs-up.svg" style="text-align: right; margin: 10px 0px 0px 435px; width:40px; height:32px;" onclick="changeImage()">
 					</a>
 					
 					<span style="margin: 20px 0px 0px 5px;"><%=likes%></span>
@@ -257,7 +259,7 @@ h2 {
 					
 					
 					<a href="location.jsp?num=<%=board.getNum()%>">
-  					<img id="myImage" src="${path}/assets/brand/hand-thumbs-up.svg" style="text-align: right; margin: 10px 0px 0px 650px; width:40px; height:32px;">
+  					<img id="myImage" src="assets/brand/hand-thumbs-up.svg" style="text-align: right; margin: 10px 0px 0px 650px; width:40px; height:32px;" onclick="changeImage()">
 					</a>
 					
 					<span style="margin: 20px 0px 0px 5px;"><%=likes%></span>
@@ -275,9 +277,21 @@ h2 {
 	
 			 %>
 		<script>
+		
+		const imagePath = "<%=path%>";
+		
+	    function changeImage() {
+	        let image = document.querySelector("#myImage");
+
+	        if (image.src.match("/assets/brand/hand-thumbs-up.svg")) {
+	            image.src = imagePath + "/assets/brand/hand-thumbs-up-fill.svg";
+	        } else {
+	            image.src = imagePath + "/assets/brand/hand-thumbs-up.svg";
+	        }
+	    }
 
 
-    function confirmDelete() {
+    	function confirmDelete() {
         // confirm 함수를 사용하여 확인 메시지를 표시
         var result = confirm("게시물을 삭제하시겠습니까?");
         

@@ -36,6 +36,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>게시판 글작성</title>
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
 	rel="stylesheet"
@@ -102,7 +103,7 @@
     <div>
 
     <table>
-        <h1 style="text-align:center;">글작성</h1>
+        <h1 style="text-align:center;">게시판 글작성</h1>
         <tr>
             <th>제목</th>
             <td><input type="text" name="title"class="form-control" id="nameInput"  maxlength="80"

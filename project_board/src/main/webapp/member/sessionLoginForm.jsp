@@ -123,27 +123,41 @@
 </head>
 <body>
 <main class="container center-form">
-<form action="${path}/member/sessionLogin.jsp" class="col-md-6">
+<form action="${path}/member/sessionLogin.jsp" class="col-md-6" style="width:350px">
 
 
 
 <%
 if(cookies.exists("id")){
 %>
-아이디 <input type="text" name="id" class="form-control" id="floatingInput" placeholder="아이디" value="<%=cookies.getValue("id") %>" size="10"/>
-
+			<img class="mb-4" src="${path}/assets/brand/door-open.svg" alt=""
+				width="72" height="57">
+			<h1 class="h3 mb-3 fw-normal">로그인</h1>
+			<div class="form-floating">
+<input type="text" name="id" class="form-control" id="floatingInput" placeholder="아이디" value="<%=cookies.getValue("id") %>" size="10"/>
+<label for="floatingInput">아이디</label>
+			</div>
 <% 
 }
 
 
 else{
 %>
-아이디 <input type="text" name="id" class="form-control" id="floatingInput" placeholder="아이디" size="10"/>
+			<img class="mb-4" src="${path}/assets/brand/door-open.svg" alt=""
+				width="72" height="57">
+			<h1 class="h3 mb-3 fw-normal">로그인</h1>
+<div class="form-floating">
+<input type="text" name="id" class="form-control" id="floatingInput" placeholder="아이디" size="10"/>
+<label for="floatingInput">아이디</label>
+			</div>
 <%
 }
 %>
 
-이메일 <input type="text" name="email" class="form-control" id="floatingInput" size="10">
+<div class="form-floating">
+<input type="text" name="email" class="form-control" id="floatingInput" size="10">
+<label for="floatingInput">아이디</label>
+</div>
 <input class="form-check-input" type="checkbox" id="flexCheckDefault" name="remember" checked/><label class="form-check-label"
 					for="flexCheckDefault"> 아이디 저장 </label>
 <div>

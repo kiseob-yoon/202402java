@@ -11,7 +11,7 @@
 
 <html>
 
-<head><title>로그인폼</title>
+<head><title>BOARD</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -24,7 +24,7 @@
 
     <header>
     <div class="inner">
-        <h1><a href="#">BOARD</a></h1>
+        <h1><a href="#">MOVIE BOARD</a></h1>
         
         <ul id="gnb">
             <li><a href="${path}/member/list.jsp">게시판</a></li>
@@ -107,7 +107,7 @@
 <footer>
     <div class="inner">
     <div class="upper">
-        <h1>BOARD</h1>
+        <h1>MOVIE BOARD</h1>
         <ul>
             <li><a href="#">Policy</a></li>
             <li><a href="#">Terms</a></li>

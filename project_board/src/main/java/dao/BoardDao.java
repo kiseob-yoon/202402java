@@ -6,7 +6,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 import dto.Board;
@@ -65,7 +67,7 @@ public class BoardDao {
 			if(rs.next()) {
 				board = new Board(rs.getInt("num"), rs.getString("writer"), 
 						rs.getString("title"), rs.getString("content"),
-						rs.getString("regtime"), rs.getInt("hits"));
+						rs.getString("regtime"), rs.getInt("hits"),rs.getInt("likes"));
 			}
 			if(inc) {
 				pstmt.executeUpdate("update board set hits=hits+1 where num=" + num);
@@ -96,10 +98,9 @@ public class BoardDao {
 
 	public int insert(Board board) {
 		PreparedStatement pstmt = null;
-		String curTime = LocalDate.now() + " " + 
-				LocalTime.now().toString().substring(0, 8);
+		String curTime = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
 		try {
-			String sql = "INSERT INTO board (num, writer, title, content, regtime, hits, likes, dislikes, memberno) VALUES (SEQ_BOARD.nextval,?, ?, ?, ?, 0, 0, 0, ?)";
+			String sql = "INSERT INTO board (num, writer, title, content, regtime, hits, likes, dislikes, memberno) VALUES (SEQ_BOARD.nextval, ?, ?, ?, TO_DATE(?, 'YYYY-MM-DD HH24:MI:SS'), 0, 0, 0, ?)";
 			pstmt = conn.prepareStatement(sql);
 			
 	        pstmt.setString(1, board.getWriter());
@@ -186,8 +187,23 @@ public ArrayList<Board> selectFit(String name) { //메서드 호출 시 ArrayLis
 	return list;
 
 }
-public int like(int num, Member member) { 
+public int like(int num) { 
 	String sql = "update board set likes=likes+1 where num = ?";
+	try {
+		PreparedStatement pstmt = conn.prepareStatement(sql);
+        pstmt.setInt(1, num);
+        int result = pstmt.executeUpdate();
+        return result;
+	} catch (SQLException e) {
+		e.printStackTrace();
+	}
+	
+	return 0;
+	
+}
+
+public int cancel(int num) { 
+	String sql = "update board set likes=likes-1 where num = ?";
 	try {
 		PreparedStatement pstmt = conn.prepareStatement(sql);
         pstmt.setInt(1, num);

@@ -57,7 +57,7 @@ public class MemberDao {
 	}
 	
 	public Member select(String id) {
-		String sql = "select * from member where memberno = ?";
+		String sql = "select * from member where id = ?";
 		PreparedStatement pstmt;
 		Member member = null;
 		try {
@@ -66,7 +66,7 @@ public class MemberDao {
 			
 			ResultSet rs = pstmt.executeQuery();	
 			if(rs.next()) {
-				member = new Member(rs.getInt("memberno"),
+				member = new Member(
 									rs.getString("id"), 
 									rs.getString("email"),
 									rs.getString("name"));
@@ -82,13 +82,12 @@ public class MemberDao {
 	public int insert(Member member) {
 		PreparedStatement pstmt = null;
 		try {
-			String sql = "INSERT INTO member (memberno,id,email,name) VALUES (?, ?, ?, ?)";
+			String sql = "INSERT INTO member (memberno,id,email,name) VALUES (SEQ_BOARD.nextval, ?, ?, ?)";
 			pstmt = conn.prepareStatement(sql);
 			
-			pstmt.setInt(1, member.getMemberno());
-	        pstmt.setString(2, member.getId());
-	        pstmt.setString(3, member.getEmail());
-	        pstmt.setString(4, member.getName());
+	        pstmt.setString(1, member.getId());
+	        pstmt.setString(2, member.getEmail());
+	        pstmt.setString(3, member.getName());
 	        
 	        return pstmt.executeUpdate();
 	        
@@ -102,12 +101,12 @@ public class MemberDao {
 	public int update(Member member) {
 		PreparedStatement pstmt = null;
 		try {
-			String sql = "update member set email=?, name=? where memberno=?";
+			String sql = "update member set email=?, name=? where id=?";
 			pstmt = conn.prepareStatement(sql);
 			
 	        pstmt.setString(1, member.getEmail());
 	        pstmt.setString(2, member.getName());
-	        pstmt.setInt(3, member.getMemberno());
+	        pstmt.setString(3, member.getId());
 	        
 	        return pstmt.executeUpdate();
 	        

@@ -11,7 +11,7 @@
         					   request.getParameter("name"));
 	MemberDao.getInstance().update(member);
         
-        session.setAttribute("userName", request.getParameter("name"));
+        session.setAttribute("name1", request.getParameter("name"));
 
 %>
 

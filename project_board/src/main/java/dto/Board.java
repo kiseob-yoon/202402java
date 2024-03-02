@@ -11,9 +11,7 @@ public class Board {
 	private int dislikes;
 	private int memberno;
 	
-	
-	
-	
+
 	public Board(int num, String writer, String title, String content, String regtime, int hits, int likes,
 			int dislikes, int memberno) {
 		super();
@@ -27,10 +25,7 @@ public class Board {
 		this.dislikes = dislikes;
 		this.memberno = memberno;
 	}
-	
-	
-	
-	
+		
 	public Board(int num, String writer, String title, String content, String regtime, int hits) {
 		super();
 		this.num = num;
@@ -41,18 +36,39 @@ public class Board {
 		this.hits = hits;
 	}
 
-
-
-
 	public Board(String writer, String title, String content) {
 		super();
 		this.writer = writer;
 		this.title = title;
 		this.content = content;
 	}
+	
+	public Board(String writer, String title, String content, int memberno) {
+		super();
+		this.writer = writer;
+		this.title = title;
+		this.content = content;
+		this.memberno = memberno;
+	}
+
+	public Board(int num) {
+		super();
+		this.num = num;
+	}
+	
+	
 
 
-
+	public Board(int num, String writer, String title, String content, String regtime, int hits, int likes) {
+		super();
+		this.num = num;
+		this.writer = writer;
+		this.title = title;
+		this.content = content;
+		this.regtime = regtime;
+		this.hits = hits;
+		this.likes = likes;
+	}
 
 	public int getNum() {
 		return num;
@@ -116,18 +132,6 @@ public class Board {
 	}
 	
 	
-	
-	
-
-	
-
-
-
-
-
-	
-	
 }
-//데이터 베이스에 있는 컬럼을 private으로 선언
-//필드명과 최대한 똑같이 클래스 이름을 짓는다
+
 

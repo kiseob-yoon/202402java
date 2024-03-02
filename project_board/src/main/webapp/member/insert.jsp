@@ -9,6 +9,9 @@
 <%
     request.setCharacterEncoding("utf-8");
 
+	int memberno = (int)session.getAttribute("memberno");
+	
+
     // 양식에 입력되었던 값 읽기
     String writer  = request.getParameter("writer" );
     String title   = request.getParameter("title"  );
@@ -26,7 +29,7 @@
 <%        
         return;
     }
-    Board board = new Board(writer, title, content);
+    Board board = new Board(writer, title, content, memberno);
     // 입력된 내용으로 새 글 레코드 추가
     BoardDao dao = BoardDao.getInstance(); 
     dao.insert(board);

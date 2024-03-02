@@ -1,3 +1,4 @@
+<%@page import="dto.Board"%>
 <%@page import="dto.Like_dislikes"%>
 <%@page import="dao.BoardDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -7,8 +8,7 @@
 int likes = (int)session.getAttribute("likes");
 int num = Integer.parseInt(request.getParameter("num"));
 
-Like_dislikes like_dislikes = new Like_dislikes(num, true);
-like_dislikes.setLike_dislike_id(likes);
+Board board = new Board(num);
 %>
 <!DOCTYPE html>
 <html>
@@ -19,7 +19,7 @@ like_dislikes.setLike_dislike_id(likes);
 <body>
 <%
 BoardDao dao = BoardDao.getInstance();
-int result = dao.like(num, like_dislikes);
+int result = dao.like(num);
 %>
 
 <script>

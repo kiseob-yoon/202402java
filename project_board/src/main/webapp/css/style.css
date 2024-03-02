@@ -135,7 +135,7 @@ section .inner .wrap::after{
     clear: both;
 }
 section .inner .wrap article{
-    width: 400px;
+    width: 280px;
     float: left;
     margin-right: 20px;
 }

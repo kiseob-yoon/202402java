@@ -13,6 +13,19 @@ public class Member {
 		this.email = email;
 		this.name = name;
 	}
+	
+	
+	
+
+	public Member(String id, String email, String name) {
+		super();
+		this.id = id;
+		this.email = email;
+		this.name = name;
+	}
+
+
+
 
 	public int getMemberno() {
 		return memberno;

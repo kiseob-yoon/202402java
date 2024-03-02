@@ -35,6 +35,8 @@
         // 로그인 성공 시 세션 설정 및 페이지 이동
         session.setAttribute("MEMBERID", member.getId());
         session.setAttribute("name", member.getEmail());
+        session.setAttribute("memberno", member.getMemberno());
+        session.setAttribute("name1", member.getName());
         response.sendRedirect("index.jsp"); //a
         out.print("로그인 성공");
     } else {

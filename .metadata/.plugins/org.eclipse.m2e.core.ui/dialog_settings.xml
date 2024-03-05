@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="D:\_dev\java2"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -43,10 +44,14 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="_sp0305_2"/>
+			<item value="sp5"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="_sp0305_2"/>
+			<item value="_sp0304"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -55,6 +60,25 @@
 			<item value="[groupId].[artifactId]"/>
 			<item value="[groupId].[artifactId]-[version]"/>
 			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="wizardPage">
+		<list key="groupId">
+			<item value="Project2_1"/>
+			<item value="_sp0305"/>
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+			<item value="Project2_1"/>
+			<item value="_sp0305"/>
 		</list>
 		<list key="version">
 			<item value="0.0.1-SNAPSHOT"/>

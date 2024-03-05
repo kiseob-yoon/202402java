@@ -67,6 +67,7 @@
 	rel="stylesheet"
 	integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
 	crossorigin="anonymous">
+<link rel="icon" type="image/x-icon" href="assets/brand/favicon.ico"/>
 <meta charset="UTF-8">
 <style>
 * {
@@ -92,16 +93,15 @@ input[type=text], textarea {
 }
 
 input[type="submit"], input[type="button"] {
-	width: 100px; /* 원하는 너비로 조절합니다. */
-	height: 40px; /* 원하는 높이로 조절합니다. */
-	padding: 10px; /* 원하는 패딩 값을 설정합니다. */
+	width: 100px; 
+	height: 40px;
+	padding: 10px; 
 }
 
-/* 버튼의 크기를 조절하는 스타일 */
 input[type="submit"], input[type="button"], input[type="reset"] {
-	width: 100px; /* 원하는 너비로 조절합니다. */
-	height: 40px; /* 원하는 높이로 조절합니다. */
-	padding: 10px; /* 원하는 패딩 값을 설정합니다. */
+	width: 100px; 
+	height: 40px; 
+	padding: 10px; 
 	margin: 10px;
 	float: right;
 }
@@ -147,14 +147,14 @@ h2 {
 				class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
 				<a href="index.jsp"
 					class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-					<svg xmlns="http://www.w3.org/2000/svg" width="40" height="32"
-						fill="currentColor" class="bi bi-clipboard-check-fill"
-						viewBox="0 0 16 16" style="margin: 10px;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" fill="currentColor" class="bi bi-film" viewBox="0 0 16 16" style="margin: 10px;">
+  		<path d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm4 0v6h8V1zm8 8H4v6h8zM1 1v2h2V1zm2 3H1v2h2zM1 7v2h2V7zm2 3H1v2h2zm-2 3v2h2v-2zM15 1h-2v2h2zm-2 3v2h2V4zm2 3h-2v2h2zm-2 3v2h2v-2zm2 3h-2v2h2z"/>
+		</svg>
           <path
 							d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5z" />
           <path
 							d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708" />
-        </svg> <span class="fs-4">BOARD</span>
+        </svg> <span class="fs-4">MOVIE BOARD</span>
 				</a>
 
 				<ul class="nav nav-pills">
@@ -209,14 +209,13 @@ h2 {
 					<input type="button" class="btn btn-primary" value="삭제" onclick="confirmDelete()">
 					
 					
+					
         			<a href="location.jsp?num=<%=board.getNum()%>">
-  					<img id="myImage" src="<%=path%>/assets/brand/hand-thumbs-up.svg" style="text-align: right; margin: 10px 0px 0px 435px; width:40px; height:32px;" onclick="changeImage()">
+  					<img id="myImage" src="<%=path%>/assets/brand/hand-thumbs-up.svg" style="text-align: right; margin: 10px 0px 0px 500px; width:40px; height:32px;" onclick="changeImage()">
 					</a>
 					
 					<span style="margin: 20px 0px 0px 5px;"><%=likes%></span>
 					
-					<img id="change" src="${path}/assets/brand/hand-thumbs-down.svg" style="text-align: right; margin: 10px 0px 0px 0px; width:40px; height:32px;" onclick="changeImage()">
-					<span style="margin: 20px 0px 0px 5px;"><%=dislikes%></span>
 					
 					</div>
 				</div>
@@ -259,13 +258,11 @@ h2 {
 					
 					
 					<a href="location.jsp?num=<%=board.getNum()%>">
-  					<img id="myImage" src="assets/brand/hand-thumbs-up.svg" style="text-align: right; margin: 10px 0px 0px 650px; width:40px; height:32px;" onclick="changeImage()">
+  					<img id="myImage" src="<%=path%>/assets/brand/hand-thumbs-up.svg" style="text-align: right; margin: 10px 0px 0px 730px; width:40px; height:32px;" onclick="changeImage()">
 					</a>
 					
 					<span style="margin: 20px 0px 0px 5px;"><%=likes%></span>
 					
-					<img id="change" src="${path}/assets/brand/hand-thumbs-down.svg" style="text-align: right; margin: 10px 5px 0px 10px; width:40px; height:32px;" onclick="changeImage()">
-					<span style="margin: 20px 0px 0px 0px;"><%=dislikes%></span>
 					</div>
 					</div>
 			</div>
@@ -280,24 +277,10 @@ h2 {
 		
 		const imagePath = "<%=path%>";
 		
-	    function changeImage() {
-	        let image = document.querySelector("#myImage");
-
-	        if (image.src.match("/assets/brand/hand-thumbs-up.svg")) {
-	            image.src = imagePath + "/assets/brand/hand-thumbs-up-fill.svg";
-	        } else {
-	            image.src = imagePath + "/assets/brand/hand-thumbs-up.svg";
-	        }
-	    }
-
 
     	function confirmDelete() {
-        // confirm 함수를 사용하여 확인 메시지를 표시
-        var result = confirm("게시물을 삭제하시겠습니까?");
-        
-        // 확인을 눌렀을 때 true를 반환하고, 취소를 눌렀을 때 false를 반환
+        var result = confirm("게시물을 삭제하시겠습니까?");   
         if (result) {
-            // 확인을 눌렀을 때 삭제 처리를 수행할 URL로 이동
             location.href = 'delete.jsp?num=<%=num%>';
         }
 

@@ -130,9 +130,9 @@
 <%
 if(cookies.exists("id")){
 %>
-			<img class="mb-4" src="${path}/assets/brand/door-open.svg" alt=""
-				width="72" height="57">
-			<h1 class="h3 mb-3 fw-normal">로그인</h1>
+<img class="mb-4" src="${path}/assets/brand/film.svg" style="display: block; margin: 0 auto;" alt="" width="72" height="57">
+
+			<h1 class="h3 mb-3 fw-normal" style="text-align:center;">로그인</h1>
 			<div class="form-floating">
 <input type="text" name="id" class="form-control" id="floatingInput" placeholder="아이디" value="<%=cookies.getValue("id") %>" size="10"/>
 <label for="floatingInput">아이디</label>
@@ -143,9 +143,8 @@ if(cookies.exists("id")){
 
 else{
 %>
-			<img class="mb-4" src="${path}/assets/brand/door-open.svg" alt=""
-				width="72" height="57">
-			<h1 class="h3 mb-3 fw-normal">로그인</h1>
+<img class="mb-4" src="${path}/assets/brand/film.svg" style="display: block; margin: 0 auto;" alt="" width="72" height="57">
+			<h1 class="h3 mb-3 fw-normal" style="text-align:center;">로그인</h1>
 <div class="form-floating">
 <input type="text" name="id" class="form-control" id="floatingInput" placeholder="아이디" size="10"/>
 <label for="floatingInput">아이디</label>
@@ -161,11 +160,11 @@ else{
 <input class="form-check-input" type="checkbox" id="flexCheckDefault" name="remember" checked/><label class="form-check-label"
 					for="flexCheckDefault"> 아이디 저장 </label>
 <div>
-<button class="btn btn-primary custom-btn" type="submit" value="로그인">로그인</button>
+<input class="btn btn-primary custom-btn" type="submit" value="로그인">
 
-			<button class="btn btn-primary custom-btn" type="button" value="회원가입"
+			<input class="btn btn-primary custom-btn" type="button" value="회원가입"
 				onclick="window.open('${path}/login/member_join_form.jsp', 'popup', 
-                                        'width=600, height=450')">회원가입</button>
+                                        'width=600, height=450')">
 </div> 
 </form>
 </main>

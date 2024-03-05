@@ -198,6 +198,20 @@ public int like(int num, Like_dislikes likes) {
 	return 0;
 	
 }
+public int dislike(int num, Like_dislikes likes) { 
+	String sql = "update board set likes=likes-1 where num = ?";
+	try {
+		PreparedStatement pstmt = conn.prepareStatement(sql);
+        pstmt.setInt(1, num);
+        int result = pstmt.executeUpdate();
+        return result;
+	} catch (SQLException e) {
+		e.printStackTrace();
+	}
+	
+	return 0;
+	
+}
 
 
 

@@ -1,3 +1,4 @@
+<%@page import="util.Cookies"%>
 <%@page import="dto.Like_dislikes"%>
 <%@page import="dao.Like_dislikesDao"%>
 <%@page import="dto.Comment"%>
@@ -32,6 +33,9 @@
 	String user = request.getParameter("writer");
     String memberId = (String)session.getAttribute("MEMBERID");
     String memName = (String)session.getAttribute("name");
+    
+    response.addCookie(
+            Cookies.createCookie("likedPosts", String.valueOf(num), "/", 60 * 60 * 24 * 30));
  
 
 	if(memberId == null){

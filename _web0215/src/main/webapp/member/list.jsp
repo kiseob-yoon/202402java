@@ -140,7 +140,7 @@
       <div class="container d-flex flex-wrap justify-content-center">
         <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto flex-row" role="search" method="post" action="select.jsp">
         <div class="d-flex align-items-center">
-          <input type="search" name="na" class="form-control" placeholder="Search..." aria-label="Search" style="margin:10px">
+          <input type="search" name="na" class="form-control" placeholder="이름을 입력하세요" aria-label="Search" style="margin:10px">
           <input type="submit" value="검색" class="btn btn-light text-dark me-2 d-inline-block"></input>
         </div>
         </form>
@@ -158,30 +158,25 @@
     </tr>
 
 
-<%     
-if(named != null && !named.isEmpty()){
-    for(Board board : search){
+<%
+if (named != null && !named.isEmpty()) {
+    for (Board board : search) {
 %>
         <tr>
             <td><%=board.getNum()%></td>
             <td style="text-align:center;">
-			<a href="view.jsp?num=<%=board.getNum()%>
-			&writer=<%=board.getWriter()%>">
-    		<%=board.getTitle()%>
-			</a>
+                <a href="view.jsp?num=<%=board.getNum()%>&writer=<%=board.getWriter()%>">
+                    <%=board.getTitle()%>
+                </a>
             </td>
             <td><%=board.getWriter()%></td>
             <td><%=board.getRegtime()%></td>
             <td><%=board.getHits()%></td>
-
         </tr>
-
-<% 
-	}
-   
-  
+<%
+    }
 } else {
-for(Board bo : list){
+    for (Board bo : list) {
 %>         
         <tr>
             <td><%=bo.getNum()%></td>
@@ -193,17 +188,15 @@ for(Board bo : list){
             <td><%=bo.getWriter()%></td>
             <td><%=bo.getRegtime()%></td>
             <td><%=bo.getHits()%></td>
-
         </tr>
-
 <%
-session.setAttribute("MEMBERID", bo.getWriter());
+    session.setAttribute("MEMBERID", bo.getWriter());
 }
 }
-
 %>
-</table>
 
+
+</table>
 <br>
 <input type="button" value="글쓰기" class="btn btn-primary" onclick="location.href='write.jsp'">
 

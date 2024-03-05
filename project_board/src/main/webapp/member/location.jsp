@@ -5,10 +5,11 @@
     pageEncoding="UTF-8"%>
 
 <%
-int likes = (int)session.getAttribute("likes");
 int num = Integer.parseInt(request.getParameter("num"));
-
 Board board = new Board(num);
+BoardDao dao = BoardDao.getInstance();
+String userId = (String)session.getAttribute("MEMBERID");
+
 %>
 <!DOCTYPE html>
 <html>
@@ -18,19 +19,34 @@ Board board = new Board(num);
 </head>
 <body>
 <%
-BoardDao dao = BoardDao.getInstance();
-int result = dao.like(num);
+int result = 0;
+
+boolean userLiked = dao.hasUserLiked(userId, request);
+
+if (userLiked) {
+    dao.like(num);
+    
+    dao.removeLikeCookie(request,response, userId);
+    result++;
+} else {
+	dao.cancel(num);
+    
+    dao.setLikeCookie(response, userId);
+    result--;
+}
+
 %>
 
 <script>
 <%
+//좋아요 결과에 따른 스크립트 처리
 if (result > 0) {
 %>
-    alert('좋아요.');
+ alert('좋아요.');
 <%
 } else {
 %>
-    alert('좋아요 처리 중 오류가 발생했습니다.');
+ alert('좋아요 취소.');
 <%
 }
 %>

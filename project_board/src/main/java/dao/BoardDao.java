@@ -11,9 +11,15 @@ import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
 import dto.Board;
 import dto.Like_dislikes;
 import dto.Member;
+import util.Cookies;
 
 public class BoardDao {
 	private static Connection conn;
@@ -216,6 +222,46 @@ public int cancel(int num) {
 	return 0;
 	
 }
+
+
+public boolean hasUserLiked(String userId, HttpServletRequest request) {
+    Cookie[] cookies = request.getCookies();
+    if (cookies != null) {
+        for (Cookie cookie : cookies) {
+            if (cookie.getName().equals("likeCookie") && cookie.getValue().equals(userId)) {
+                return true; // 이미 누른 경우 true 반환
+            }
+        }
+    }
+    return false; // 아직 누르지 않은 경우 false 반환
+}
+
+
+public void setLikeCookie(HttpServletResponse response, String userId) {
+    Cookie likeCookie = new Cookie("likeCookie", userId);
+    likeCookie.setMaxAge(24 * 60 * 60); 
+    response.addCookie(likeCookie);
+}
+
+
+void increaseLikeCount() {
+    System.out.println("좋아요 수가 증가했습니다.");
+}
+
+public static void removeLikeCookie(HttpServletRequest request, HttpServletResponse response, String userId) {
+    Cookie[] cookies = request.getCookies();
+    if (cookies != null) {
+        for (Cookie cookie : cookies) {
+            if (cookie.getName().equals("likeCookie") && cookie.getValue().equals(userId)) {
+                cookie.setMaxAge(0);
+                response.addCookie(cookie);
+                break; 
+            }
+        }
+    }
+}
+
+
 
 
 

@@ -8,6 +8,7 @@
 <%
 	String memberId = (String)session.getAttribute("MEMBERID");
 	String named = (String)session.getAttribute("named");
+	String title = (String)session.getAttribute("title");
 
 
 	if(memberId == null){
@@ -16,7 +17,7 @@
 
 	BoardDao dao = BoardDao.getInstance(); 
 	List<Board> list = dao.selectList();
-	List<Board>search = dao.selectFit(named);
+	List<Board>search = dao.selectFit(named,title);
 	
 
 
@@ -93,7 +94,7 @@
     
     
 <%     
-if(named != null && !named.isEmpty()){
+if(named != null && !named.isEmpty() && title != null && !title.isEmpty()){
     for(Board board : search){
 %>
         <tr>

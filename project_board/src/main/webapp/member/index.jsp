@@ -123,7 +123,7 @@
         TEL : 031-111-1234  C.P : 010-1234-5678  
         </address>
         <p>
-        2024 BOARD &copy; copyright all rights reserved.
+        2024 MOVIE BOARD &copy; copyright all rights reserved.
         </p>
     </div>
     </div>

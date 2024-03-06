@@ -169,13 +169,14 @@ public Board selectForLogin2(int num, String writer) {
 	return board;
 
 }
-public ArrayList<Board> selectFit(String name) { //메서드 호출 시 ArrayList에 Board 객체들을 저장하고 반환할 수 있음 
+public ArrayList<Board> selectFit(String name,String title) { //메서드 호출 시 ArrayList에 Board 객체들을 저장하고 반환할 수 있음 
 	ArrayList<Board> list = new ArrayList<Board>(); //ArrayList를 생성
-	String sql = "select * from board where writer like ? order by num desc"; //db에서 쿼리문 따옴
+	String sql = "select * from board where writer like ? OR title LIKE ? order by num desc"; //db에서 쿼리문 따옴
 	PreparedStatement pstmt; 
 	try {
 		pstmt = conn.prepareStatement(sql); //sql문을 포함해서 객체 생성
-		pstmt.setString(1, "%" + name + "%"); 
+		pstmt.setString(1, "%" + name + "%");
+		pstmt.setString(2, "%" + title + "%"); 
 		ResultSet rs = pstmt.executeQuery(); //ResultSet에 객체를 담아둠
 
 		while (rs.next()) { //rs에 담아둔 객체를 반복해서 찍어낸다.
@@ -193,6 +194,8 @@ public ArrayList<Board> selectFit(String name) { //메서드 호출 시 ArrayLis
 	return list;
 
 }
+
+
 public int like(int num) { 
 	String sql = "update board set likes=likes+1 where num = ?";
 	try {

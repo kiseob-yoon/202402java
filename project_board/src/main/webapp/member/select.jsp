@@ -9,7 +9,7 @@ String memberId = (String)session.getAttribute("MEMBERID");
 
 session.setAttribute("named", writer);
 String named = (String)session.getAttribute("named");
-
+session.setAttribute("title", writer);
 
 if(memberId == null){
 	response.sendRedirect("sessionLoginForm.jsp");

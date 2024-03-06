@@ -277,7 +277,6 @@ h2 {
 		
 		const imagePath = "<%=path%>";
 		
-
     	function confirmDelete() {
         var result = confirm("게시물을 삭제하시겠습니까?");   
         if (result) {

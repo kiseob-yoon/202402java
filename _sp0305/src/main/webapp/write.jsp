@@ -6,6 +6,10 @@
 <%
 	MemberDto memberdto = (MemberDto)session.getAttribute("member");
 	System.out.println(memberdto);
+	
+	if(memberdto == null){
+		response.sendRedirect("loginForm.jsp");
+	}
 %>
 <!DOCTYPE html>
 <html>
@@ -29,8 +33,8 @@
         </tr>
         <tr>
             <th>작성자</th>
-            <td><input type="text" name="writer" maxlength="20"
-                       value="${msg.writer}">
+            <td><input type="text" name="writer" maxlength="20" readonly
+                       value="<%=memberdto.getName()%>">
             </td>
         </tr>
         <tr>
@@ -41,6 +45,7 @@
     </table>
 
     <br>
+    <input type="hidden" name="memberno" value="<%=memberdto.getMemebrno()%>">
     <input type="submit" value="저장">
     <input type="button" value="취소" onclick="history.back()">
 </form>

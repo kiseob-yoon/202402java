@@ -6,7 +6,6 @@
 <c:set var="path" value="${pageContext.request.contextPath}"/>
 
     <%
-
 	Cookies cookies = new Cookies(request);
 	%>
 <!DOCTYPE html>

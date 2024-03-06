@@ -6,6 +6,9 @@
 <%
 	MemberDto memberdto = (MemberDto)session.getAttribute("member");
 	System.out.println(memberdto);
+	if(memberdto == null){
+		response.sendRedirect("loginForm.jsp");
+	}
 %>
 <!DOCTYPE html>
 <html>
@@ -28,7 +31,7 @@
     </style>
 </head>
 <body>
-
+<%=memberdto.getName()%>님 로그인
 <table>
     <tr>
         <th class="num"    >번호    </th>

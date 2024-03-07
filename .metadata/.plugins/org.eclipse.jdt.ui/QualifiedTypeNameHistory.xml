@@ -1,14 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
-    <fullyQualifiedTypeName name="java.io.Writer"/>
-    <fullyQualifiedTypeName name="java.io.FileWriter"/>
-    <fullyQualifiedTypeName name="dto.Member"/>
-    <fullyQualifiedTypeName name="dao.MemberDao"/>
-    <fullyQualifiedTypeName name="java.io.InputStream"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="java.io.File"/>
-    <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
     <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="dto.Comment"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
@@ -49,15 +40,24 @@
     <fullyQualifiedTypeName name="spring.MemberNotFoundException"/>
     <fullyQualifiedTypeName name="spring.WrongIdPasswordException"/>
     <fullyQualifiedTypeName name="assembler.Assembler"/>
-    <fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
     <fullyQualifiedTypeName name="lombok.ToString"/>
-    <fullyQualifiedTypeName name="org.springframework.context.annotation.AnnotationConfigApplicationContext"/>
     <fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
-    <fullyQualifiedTypeName name="spring.MemberDao"/>
     <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
     <fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
     <fullyQualifiedTypeName name="spring.MemberRegisterService"/>
     <fullyQualifiedTypeName name="spring.ChangePasswordService"/>
     <fullyQualifiedTypeName name="lombok.Getter"/>
+    <fullyQualifiedTypeName name="java.util.Collection"/>
+    <fullyQualifiedTypeName name="spring.MemberListPrinter"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.AnnotationConfigApplicationContext"/>
+    <fullyQualifiedTypeName name="config.AppCtx"/>
+    <fullyQualifiedTypeName name="spring.Member"/>
+    <fullyQualifiedTypeName name="spring.MemberDao"/>
+    <fullyQualifiedTypeName name="spring.MemberInfoPrinter"/>
+    <fullyQualifiedTypeName name="spring.MemberPrinter"/>
     <fullyQualifiedTypeName name="lombok.Setter"/>
+    <fullyQualifiedTypeName name="spring.VersionPrinter"/>
+    <fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
+    <fullyQualifiedTypeName name="com.board.BoardDao"/>
+    <fullyQualifiedTypeName name="com.board.BoardService"/>
 </qualifiedTypeNameHistroy>

@@ -24,12 +24,13 @@ int result = 0;
 boolean userLiked = dao.hasUserLiked(userId, request);
 
 if (userLiked) {
-    dao.like(num);
+	dao.cancel(num);
     
     dao.removeLikeCookie(request,response, userId);
     result++;
 } else {
-	dao.cancel(num);
+    dao.like(num);
+
     
     dao.setLikeCookie(response, userId);
     result--;
@@ -42,11 +43,12 @@ if (userLiked) {
 //좋아요 결과에 따른 스크립트 처리
 if (result > 0) {
 %>
- alert('좋아요.');
+alert('좋아요 취소.');
+
 <%
 } else {
 %>
- alert('좋아요 취소.');
+alert('좋아요.');
 <%
 }
 %>

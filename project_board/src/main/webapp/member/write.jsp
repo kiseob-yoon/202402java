@@ -112,7 +112,7 @@
         <tr >
             <th>작성자</th>
             <td><input type="text" name="writer" class="form-control" id="nameInput" maxlength="20"
-                       value="<%=session.getAttribute("MEMBERID")%>"readonly>
+                       value="<%=session.getAttribute("name1")%>"readonly>
             </td>
         </tr>
         <tr>

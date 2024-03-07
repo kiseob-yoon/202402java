@@ -210,7 +210,7 @@ h2 {
 					
 					
 					
-        			<a href="location.jsp?num=<%=board.getNum()%>">
+        			<a href="like.jsp?num=<%=board.getNum()%>">
   					<img id="myImage" src="<%=path%>/assets/brand/hand-thumbs-up.svg" style="text-align: right; margin: 10px 0px 0px 500px; width:40px; height:32px;" onclick="changeImage()">
 					</a>
 					
@@ -257,7 +257,7 @@ h2 {
 					onclick="location.href='list.jsp'">
 					
 					
-					<a href="location.jsp?num=<%=board.getNum()%>">
+					<a href="like.jsp?num=<%=board.getNum()%>">
   					<img id="myImage" src="<%=path%>/assets/brand/hand-thumbs-up.svg" style="text-align: right; margin: 10px 0px 0px 730px; width:40px; height:32px;" onclick="changeImage()">
 					</a>
 					

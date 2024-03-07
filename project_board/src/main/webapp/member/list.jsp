@@ -121,7 +121,7 @@ for(Board bo : list){
         <tr>
             <td><%=bo.getNum()%></td>
             <td style="text-align:center;">
-                <a href="view.jsp?num=<%=bo.getNum()%>" class="custom-link">
+                <a href="view.jsp?num=<%=bo.getNum()%> " class="custom-link">
                     <%=bo.getTitle()%>
                 </a>
             </td>
